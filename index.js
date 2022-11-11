@@ -1,5 +1,4 @@
 const vehicleTemplateText = document.querySelector('.vehicleTemplate');
-const colorTemplateText = document.querySelector('.colorTemplate');
 const userTemplate = Handlebars.compile(vehicleTemplateText.innerText);
 
 const usersElem = document.querySelector('.cars')
@@ -16,13 +15,38 @@ axios
     });
 
 
-    // axios
-    // .get("http://api-tutor.herokuapp.com/v1/cars")
-    // .then(result => {
-    //     const carsColor = result.data;
-        
-    //     usersElem.innerHTML = userTemplate({
-    //         carsColor
-    //     });
+    //  color api
+    const colorTemplateText = document.querySelector('.colorTemplate');
+    const colorTemplate = Handlebars.compile(colorTemplateText.innerText);
 
-    // });
+    const colorElem = document.querySelector('.showColor')
+
+    axios
+    .get("http://api-tutor.herokuapp.com/v1/colors")
+    .then(result => {
+        const carsColor = result.data;
+        
+        colorElem.innerHTML = colorTemplate({
+            carsColor
+        });
+
+    });
+
+     //  Brand api
+    //  const brandTemplateText = document.querySelector('.brandTemplate');
+    //  const brandTemplate = Handlebars.compile(brandTemplateText.innerText);
+ 
+    //  const brandElem = document.querySelector('.showBrand')
+ 
+    //  axios
+    //  .get("https://api-tutor.herokuapp.com/v1/makes")
+    //  .then(result => {
+    //      const carBrand = result.data;
+         
+    //      brandElem.innerHTML = brandTemplate({
+    //          carBrand
+    //      });
+ 
+    //  });
+
+    
