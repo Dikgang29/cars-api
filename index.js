@@ -33,20 +33,20 @@ axios
     });
 
      //  Brand api
-    //  const brandTemplateText = document.querySelector('.brandTemplate');
-    //  const brandTemplate = Handlebars.compile(brandTemplateText.innerText);
+     const brandTemplateText = document.querySelector('.brandTemplate');
+     const brandTemplate = Handlebars.compile(brandTemplateText.innerText);
  
-    //  const brandElem = document.querySelector('.showBrand')
+     const brandElem = document.querySelector('.showBrands');
  
-    //  axios
-    //  .get("https://api-tutor.herokuapp.com/v1/makes")
-    //  .then(result => {
-    //      const carBrand = result.data;
+     axios
+     .get("https://api-tutor.herokuapp.com/v1/makes")
+     .then(result => {
+         const carBrand = result.data;
          
-    //      brandElem.innerHTML = brandTemplate({
-    //          carBrand
-    //      });
+         brandElem.innerHTML = brandTemplate({
+             carBrand
+         });
  
-    //  });
+     });
 
     

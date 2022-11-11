@@ -28,7 +28,7 @@
     
     <!-- showing the available car brands -->
     <script class="brandTemplate" type="text/template-x" >
-        {{#each carsColor}}
+        {{#each carBrand}}
         <li>{{this}}</li>
         {{/each}}
     </script>
@@ -44,8 +44,6 @@
             <tr>
                 <th>CAR MAKE</th>
                     <th>Car Model</th>
-                
-                
             </tr>
         </thead>
         <tbody class="cars">
@@ -61,16 +59,24 @@
     <table>
         <thead>
             <tr>
-                <th>Colors</th>
-                    
-                
-                
+                <th>Colors</th>    
             </tr>
         </thead>
         <tbody class="showColor">
             <!-- Put data from the API in here -->
+        </tbody>
+    </table>
 
-
+ <!-- the car brands  -->
+    <h1>Available CAR BRANDS</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>BRANDS</th>    
+            </tr>
+        </thead>
+        <tbody class="showBrands">
+            <!-- Put data from the API in here -->
         </tbody>
     </table>
 
