@@ -39,7 +39,7 @@ axios
      const brandElem = document.querySelector('.showBrands');
  
      axios
-     .get("http://api-tutor.herokuapp.com/v1/makes")
+     .get("https://api-tutor.herokuapp.com/v1/makes")
      .then(result => {
          const carBrand = result.data;
          
