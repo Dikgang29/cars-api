@@ -4,7 +4,7 @@ const userTemplate = Handlebars.compile(vehicleTemplateText.innerText);
 const usersElem = document.querySelector('.cars')
 
 axios
-    .get("http://api-tutor.herokuapp.com/v1/cars")
+    .get("https://api-tutor.herokuapp.com/v1/cars")
     .then(result => {
         const cars = result.data;
         
@@ -22,7 +22,7 @@ axios
     const colorElem = document.querySelector('.showColor')
 
     axios
-    .get("http://api-tutor.herokuapp.com/v1/colors")
+    .get("https://api-tutor.herokuapp.com/v1/colors")
     .then(result => {
         const carsColor = result.data;
         
